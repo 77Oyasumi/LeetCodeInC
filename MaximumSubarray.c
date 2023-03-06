@@ -20,7 +20,7 @@ int maxSubArray(int * nums, int numsSize){
 /*
 
 int maxSubArray(int * nums, int numsSize){
-    int max = INT_MIN;
+    int max = INT_MIN; 不給初值下面會產生<未定義行為>
     // 選擇一個起點
     for(int i = 0; i < numsSize; i++){
         // 選擇一個終點
@@ -61,7 +61,7 @@ int maxSubArray(int * nums, int numsSize){
         for(int j = i; j < numsSize; j++){
             // 計算從起點到終點的和
             sum += nums[j];
-            if(sum > max){ // <未定義行為>
+            if(sum > max){ 
                 max = sum;
             }
         }
